@@ -1,0 +1,736 @@
+.originalColor{
+	background: $darkgrey;
+}
+
+.changeColor{
+	background: $bb;
+}
+
+.originalColorXuin{
+	color: pink;
+}
+
+.changeColorXuin{
+	color: $darkgrey;
+}
+
+.originalColorXuinBorder{
+	background: linear-gradient(to right, $bb, pink);
+}
+
+.changeColorXuinBorder{
+	background: linear-gradient(to right, $bb, $darkgrey);
+}
+// icons
+.originalHoagNCI{
+	color: paleturquoise;
+}
+
+.changeHoagNCI{
+	color: $bb;
+}
+
+// hover text
+.originalHoagNCH{
+	color:pink;
+	border-top: 3px solid paleturquoise; 
+}
+
+.changeHoagNCH{
+	color:indigo;
+	border-top: 3px solid indigo; 
+}
+
+//background
+.originalHoagNCB{
+	background: transparent;
+}
+
+.changeHoagNCB{
+	background: linear-gradient(to right, rgba(0,0,0,0.25), rgba(0,0,0,0.25));
+}
+
+.logo{
+		height: 47px;
+		width: 55px;
+		position:absolute;
+		top:15px;
+		left:20px;
+		background:$bb;
+		z-index: 300;
+		border-radius: 5px;
+
+		img{
+		border-radius: 5px;
+		}
+}
+
+.hoag-nav-wrapper{
+	position:fixed;
+	z-index: 300;
+	padding: 10px;
+	width: 100%;
+
+	nav{
+
+		ul{
+			display:flex;
+			justify-content: center;
+			margin:0;
+			padding:0;
+
+			li{
+				list-style-type: none;
+				margin-right:50px;
+				color:$darkgrey;
+				position:relative;
+			
+				a{
+				text-decoration: none;
+				font-size: 20px;
+				
+					&:visited{
+						color: $darkgrey;
+					}
+				}	
+
+				.label{
+					opacity: 0;
+					position:absolute;
+					font-family: 'Source Sans Pro', sans-serif;
+					font-size: 15px;
+					left: -8px;
+					transition: opacity 0.5s;
+					
+					p{
+						margin: 6px 0 0 0;
+						padding-top: 6px;
+					}
+				}
+				
+				&:hover .label{
+					opacity:1;	
+				}				
+			}
+		}
+	}
+}
+
+.hoag-nav-wrapper nav ul li:nth-child(3){
+	margin-right:0;
+}
+
+.hoag-nav-wrapper nav ul li .label-ge{
+			opacity:0;
+			position:absolute;
+			font-family: 'Source Sans Pro', sans-serif;
+			font-size: 15px;
+			left: -16px;
+		}
+
+.hoag-nav-wrapper nav ul li .label-pricing{
+			opacity:0;
+			position:absolute;
+			font-family: 'Source Sans Pro', sans-serif;
+			font-size: 15px;
+			left: -20px;
+		}
+
+.hoag-main{
+	position: relative;
+	height: 230vh;
+	transition: 0.6s all;
+
+	.info-wrapper{
+		width: 1200px;
+		margin: 0 auto;
+		display:flex;
+		flex-direction:column;
+
+		.title{
+			padding: 80px 0 0 125px;
+
+			@include breakpoint3{
+				width: 400px;
+				padding: 100px 0 0 10px;
+			}
+
+			h1{
+				@include h1-in-sections(pink);
+				position: relative;
+				letter-spacing: 3px;
+				font-size: 65px;
+				z-index: 100;
+
+				span{
+					font-style: italic;
+					letter-spacing: 12px;
+				}
+
+				.underline{
+				@include underline (34px, 10px, 65px, 1px);
+				background: linear-gradient(to left, lightpink, $bb);
+				}
+			}
+		}
+
+		.overview{
+			width: 450px;
+			margin: 125px 0 0 475px;
+
+			@include breakpoint2{
+				margin-left: 250px;
+			}
+
+			@include breakpoint3{
+				margin-left:50px;
+				width: 400px;
+			}
+	
+			h2{
+				@include h1-in-sections(pink);
+				text-align: center;
+				z-index: 100;
+				position:relative;
+
+				span{
+					font-style: italic;
+				}
+
+				.underline{
+				@include underline (17px, 6px, 40px, 118px);
+				background: linear-gradient(to left, lightpink, $bb);
+				}
+			}
+
+			p{
+				position:relative;
+				z-index: 100;	
+				font-family: $text;
+				color: pink;
+				text-align: justify;
+			}
+
+			.buttons{
+				display:flex;
+				justify-content: center;
+				
+				.button1, .button2{
+					@include button(paleturquoise);
+					margin-right: 50px;
+
+					&:hover{
+						cursor: pointer;
+					}
+
+					a{
+						text-decoration: none;
+						display:block;
+						padding:9px 15px;
+						color: $darkgrey;
+
+							&:visited{
+								color: $darkgrey;
+							}
+					}
+				}		
+		
+				.button2{
+					margin-right: 0;
+					}
+				}		
+		}
+		
+		
+		.galaxy-engine{
+			width: 375px;
+			align-self:flex-end;
+			margin: 250px 0 0 0;
+			position:relative;
+			z-index: 200;
+
+			@include breakpoint1{
+				align-self: center;
+				margin-top: 100px;
+			}
+
+			@include breakpoint2{
+				align-self: flex-start;
+				margin: 150px 0 100px 290px;
+			}
+
+			@include breakpoint3{
+				align-self: flex-start;
+				margin-left: 50px;
+				margin-top: 70px;
+			}
+
+			h2{
+				text-transform: uppercase;
+				font-family: $h1;
+				margin:0;
+				font-size: 40px;
+				letter-spacing: 5px;
+				position: relative;
+				letter-spacing: 3px;
+				font-size: 35px;
+				z-index: 100;
+				margin-bottom: 10px;
+				text-align:center;
+
+				span{
+					font-style: italic;
+				}
+
+				.underline{
+				width: 17px;
+				height: 6px;
+				position:absolute;
+				top: 35px;
+				left: 55px;
+				border-radius: 2px;
+				}
+			}
+
+			.mountains{
+				height: 156px;
+				width: 375px;
+
+				img{
+					border-radius: 5px;
+					border: 3px solid slateblue;
+				}
+			}
+
+			p{
+				z-index: 100;
+				position:relative;
+				font-family: $text;
+				text-align: justify;
+			}
+
+		}
+
+		.pricing{
+			width: 500px;
+			display: flex;
+			flex-direction:column;
+			margin: 50px 0 0 0;
+
+			@include breakpoint2{
+				margin-left: 290px;
+			}
+
+			@include breakpoint3{
+				width: 400px;
+				margin: 70px 0 0 50px;
+			}
+
+			h2{
+				text-transform: uppercase;
+				font-family: $h1;
+				margin:0;
+				font-size: 40px;
+				letter-spacing: 5px;
+				position: relative;
+				letter-spacing: 4.5px;
+				font-size: 35px;
+				z-index: 100;
+				margin-bottom: 10px;
+				text-align:center;
+
+				span{
+					font-style: italic;
+				}
+
+				.underline{
+				width: 17px;
+				height: 6px;
+				position:absolute;
+				top: 35px;
+				left: 176px;
+				border-radius: 2px;
+				}
+			}
+
+			p{
+				z-index: 100;
+				position:relative;
+				font-family: $text;
+				text-align: justify;
+			}
+			
+			// put a inside button because:
+			// 1. Semantically correct
+			// 2. Need padding for a and not button because then parts of the button not clickable to navigate to url
+			.button-container{
+				display: flex;
+				justify-content: center;
+
+				button{
+					@include button(slateblue);
+
+						&:hover{
+							cursor: pointer;
+						}
+
+						a{
+							text-decoration: none;
+							display:block;
+							color: $bb;
+							padding: 9px 15px;
+
+								&:visited{
+									color: $bb;
+								}
+						}
+					}		
+				}
+
+			@include breakpoint1{
+				margin: 125px 0 0 125px;
+			}
+			}
+		}
+	}
+	
+.shape-container{
+	// position:relative;
+	// Making pos: relative tells the previous element that the foot print of .shape-container is still there. The preivous element - .info-wrapper - is display:block thus moves up and 'pushes down' .shape-container. If pos:relative is not specified, .info-wrapper treats .shape-container as if it didn't exist
+
+	.shape1{
+		@include hoag-shapes(25px, 25px, 50px, 850px, mediumslateblue, $bb, -135deg);
+	}
+
+	.shape2{
+		@include hoag-shapes(200px, 200px, 200px, 100px, darkslateblue, $bb, 45deg);
+		@include breakpoint3{
+			left: 300px;
+		}
+	}
+
+	.shape3{
+		@include hoag-shapes(300px, 300px, 400px, 1200px, slateblue, lightcyan, 135deg);
+		z-index: 10;
+	}
+
+	.shape4{
+		@include hoag-shapes(125px, 125px, 400px, 1150px, mediumslateblue, indigo, -45deg);
+		z-index: 10;
+	}
+
+	.shape5{
+		@include hoag-shapes(125px, 125px, 400px, 300px, slateblue, paleturquoise, -45deg);
+
+		@include breakpoint2{
+			top: 450px;
+			left: 700px;
+		}
+
+		@include breakpoint3{
+			top: 300px;
+			left: 400px;
+		}
+	}
+
+	.shape6{
+		@include hoag-shapes(180px, 180px, 910px, 560px, slateblue, indigo, -225deg);
+		z-index: 20;
+
+		@include breakpoint1{
+			top: 800px;
+			left: 900px;
+		}
+
+		@include breakpoint2{
+			left: 800px;
+		}
+	}
+
+	.shape7{
+		@include hoag-shapes(40px, 40px, 700px, 270px, slateblue, mediumslateblue, -45deg);
+		z-index: 10;
+	}
+
+	.shape8{
+		@include hoag-shapes(250px, 250px, 950px, 450px, slateblue, paleturquoise, -135deg);
+
+		@include breakpoint1{
+			top: 870px;
+			left: 750px;
+		}
+
+		@include breakpoint2{
+			left: 690px;
+		}
+	}
+
+	.shape9{
+		@include hoag-shapes(300px, 300px, 1300px, 1200px, slateblue, $darkgrey, -45deg);
+	}
+
+	.shape10{
+		@include hoag-shapes(125px, 125px, 1200px, 900px, slateblue, aquamarine, -135deg);
+
+		@include breakpoint2{
+			left: 100px;
+		}
+	}
+
+	.shape11{
+		@include hoag-shapes(250px, 250px, 700px, -115px, slateblue, aquamarine, -45deg);
+	}
+}
+
+.hoag-footer{
+	height: 400px;
+	background: $darkgrey;
+
+	@include breakpoint1{
+		height: 500px;
+	}
+
+	@include breakpoint2{
+		height: 500px;
+	}
+
+	@include breakpoint3{
+		height: 500px;
+	}
+
+	.wrapper-footer{
+
+		display:flex;
+		justify-content: center;
+		height: 100%;
+		width: 100%;
+		position:relative;		
+			
+			.center-footer{
+				display:flex;
+				justify-content: space-between;
+				align-items: center;
+				width: 70%;
+				position:relative;
+				z-index: 200;
+
+				.left{
+				
+					.contact{
+						height: 275px;
+						width: 500px;
+						background: gainsboro;
+						border-radius: 2px;
+						padding: 0 20px;
+						display:flex;
+						flex-direction:column;
+
+						@include breakpoint1{
+							margin-top: 10px;		
+						}
+						@include breakpoint2{
+							margin-top: 10px;
+						}
+						@include breakpoint3{
+							margin-top: 10px;
+						}	
+
+						@include breakpoint5a{
+							width: 410px;
+						}
+
+						h3{
+							font-family: $h1;
+							font-size: 24px;
+							text-transform: uppercase;
+							text-align: center;
+							margin: 20px 0;
+							letter-spacing: 2px;
+						}
+						
+						.name::-webkit-input-placeholder, .email::-webkit-input-placeholder, .message::-webkit-input-placeholder{
+							font-family:$text;
+							font-size: 14px;
+						}
+
+						.name, .email, .message{
+							border:none;
+							border-radius: 2px;
+							padding: 5px 5px;
+							font-size: 13px;
+							margin-bottom: 10px;
+						}
+
+						.name{
+							margin-right: 5px;
+							width: calc(50% - 5px);
+						}
+						
+						.email{
+							width: calc(50% - 5px);
+						}
+
+						.message{
+							width: 100%;
+							margin-bottom: 20px;
+						}
+
+						button{
+							background: transparent;
+							border: none;
+							text-transform: uppercase;
+							font-family: $text;
+							font-weight: 700;
+							font-size: 19px;
+							
+							a{
+								color: darkslateblue;
+								text-decoration: none;
+								}
+							}
+						}
+					}
+				
+
+				.right{
+					width: 400px;
+					height: 200px;
+					position:relative;
+					
+					@include breakpoint5a{
+						width: 350px;
+					}
+
+					p:before{
+						content:'“';
+						position:absolute;
+						top: -20px;
+						left: -30px;
+						font-size: 50px;
+
+						@include breakpoint1{
+							top: 1px;
+						}
+						@include breakpoint2{
+							top:1px;
+						}
+						@include breakpoint3{
+							bottom:3px;
+						}
+						@include breakpoint5a{
+							content: '';
+						}
+					}
+					p:after{
+						content:'”';
+						position:absolute;
+						right: -20px;
+						font-size: 50px;
+						bottom:-20px;
+
+						@include breakpoint1{
+							bottom: 3px;
+						}
+						@include breakpoint2{
+							bottom:3px;
+						}
+						@include breakpoint3{
+							bottom:3px;
+						}
+
+						@include breakpoint5a{
+							content: '';
+						}
+					}
+
+					p{
+						font-family: $text;
+						font-size: 14px;
+						font-style: italic;
+						color: $bb;
+						text-align: justify;
+					}
+				}
+
+				.side-shapes{
+					.shape{
+						background: linear-gradient(darkslateblue, darkseagreen);
+					}
+				}
+		
+			@include breakpoint1{
+				flex-direction: column;
+			}
+
+			@include breakpoint2{
+				flex-direction: column;
+			}	
+
+			@include breakpoint3{
+				flex-direction: column;
+			}
+		}
+	}
+}
+
+	.side-shapes{
+		
+		.shape{
+			background: linear-gradient(darkslateblue, darkseagreen);
+			position:absolute;
+			transform: rotate(45deg);
+			border-radius: 5px;
+		}
+		.shape1{
+			height:247.49px;
+			width: 247.49px;
+			bottom:52px;
+			left: -125px;	
+		}
+
+		.shape2{
+			height:120.13px;
+			width: 120.13px;
+			top:37px;
+			left: -62px;
+		}
+
+		.shape3{
+			height:180.13px;
+			width: 180.13px;
+			top:125px;
+			left: -100px;
+		}
+
+		.shape4{
+			height:247.49px;
+			width: 247.49px;
+			bottom:52px;
+			right: -125px;
+			transform: rotate(-45deg);
+		}
+	
+		.shape5{
+			height:120.13px;
+			width: 120.13px;
+			top: 37px;
+			right: -62px;
+			z-index:10;
+			transform: rotate(-45deg);
+		}
+
+		.shape6{
+			height:180.13px;
+			width: 180.13px;
+			top:125px;
+			right: -100px;
+			transform: rotate(-45deg);
+			z-index:10;
+		}
+
+		
+	}	
+
+	.bottom{
+		height: 80%;
+	}

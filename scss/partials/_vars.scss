@@ -1,0 +1,116 @@
+//colours
+$darkgrey: #23292c;
+$bb: #e6e6e6;
+
+//fonts
+$h1: 'Do Hyeon', sans-serif;
+$text: 'Source Sans Pro', sans-serif;
+$text2: 'Ubuntu', sans-serif;
+
+//h1
+$text-color: darken(white,7);
+$text-colord1: darken(white, 10);
+
+//mixins
+@mixin h1-in-sections ($var){
+	text-transform: uppercase;
+	font-family: $h1;
+	margin:0;
+	font-size: 40px;
+	letter-spacing: 5px;
+	color: $var;
+}
+
+@mixin underline ($width, $height, $top:0, $left:0){
+	width: $width;
+	height: $height;
+	background: linear-gradient(45deg, $bb, $darkgrey);
+	position:absolute;
+	top: $top;
+	left: $left;
+	border-radius: 2px;
+}
+
+@mixin button($background-color, $color: $bb){
+	border-radius: 3px;
+	background: $background-color;
+	border: none;
+	text-transform: uppercase;
+	font-family: $text2;
+	font-size: 15px;
+	color: $color;
+}
+
+@mixin hoag-shapes ($height, $width, $top, $left, $color1, $color2, $deg){
+	height:$height;
+	width:$width;
+	top: $top;
+	left: $left;
+	background: linear-gradient($color1, $color2);
+	border-radius: 5px;
+	transform: rotate($deg);
+	position:absolute;
+	color: $bb;
+}
+
+//MQ mixins
+//Hoag page
+$width2: 950px;
+$width3: 949px;
+$width4: 800px;
+$width5: 799px;
+$width6: 1340px; // <-- home page breakpoints start here
+$width7: 1030px;
+$width8: 800px;
+$width9: 610px; 
+$width10: 552px; //<-- fix hover info 
+
+//home page
+@mixin breakpoint1a{
+	@media(max-width: $width6){
+		@content;
+	}
+}
+
+@mixin breakpoint2a{
+	@media(max-width: $width7){
+		@content;
+	}
+}
+
+@mixin breakpoint3a{
+	@media(max-width: $width8){
+		@content;
+	}
+}
+
+@mixin breakpoint4a{
+	@media(max-width: $width9){
+		@content;
+	}
+}
+
+@mixin breakpoint5a{
+	@media(max-width: $width10){
+		@content;
+	}
+}
+
+//hoag
+@mixin breakpoint1{
+	@media(min-width:$width2) and (max-width: $width6){
+		@content;
+	}
+}
+
+@mixin breakpoint2{
+	@media(min-width: $width4) and (max-width: $width3){
+		@content;
+	}
+}
+
+@mixin breakpoint3{
+	@media(max-width: $width5){
+		@content;
+	}
+}

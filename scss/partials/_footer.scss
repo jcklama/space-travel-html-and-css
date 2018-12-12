@@ -1,0 +1,204 @@
+.home-footer{
+	height: 400px;
+	background: $darkgrey;
+
+	@include breakpoint1a{
+		height: 500px;		
+	}
+
+.wrapper-footer{
+	display:flex;
+	justify-content: center;
+	height: 100%;
+	width: 100%;
+	position:relative;
+	
+	.center-footer{
+		display:flex;
+		justify-content: space-between;
+		align-items: center;
+		width: 70%;
+
+		@include breakpoint1a{
+			flex-direction: column;
+			z-index: 100;		
+		}
+
+		.left{
+			
+			.contact{
+				height: 275px;
+				width: 500px;
+				background: gainsboro;
+				border-radius: 2px;
+				padding: 0 20px;
+				display:flex;
+				flex-direction:column;
+
+				@include breakpoint1a{
+					margin-top: 10px;		
+				}
+
+				@include breakpoint5a{
+					width: 410px;
+				}
+
+				h3{
+					font-family: $h1;
+					font-size: 24px;
+					text-transform: uppercase;
+					text-align: center;
+					margin: 20px 0;
+					letter-spacing: 2px;
+				}
+				
+				.name::-webkit-input-placeholder, .email::-webkit-input-placeholder, .message::-webkit-input-placeholder{
+					font-family:$text;
+					font-size: 14px;
+				}
+
+				.name, .email, .message{
+					border:none;
+					border-radius: 2px;
+					padding: 5px 5px;
+					font-size: 13px;
+					margin-bottom: 10px;
+				}
+
+				.name{
+					margin-right: 5px;
+					width: calc(50% - 5px);
+				}
+				
+				.email{
+					width: calc(50% - 5px);
+				}
+
+				.message{
+					width: 100%;
+					margin-bottom: 20px;
+				}
+
+				button{
+					background: transparent;
+					border: none;
+					text-transform: uppercase;
+					font-family: $text;
+					font-weight: 700;
+					font-size: 19px;
+					
+					a{
+						color: darkslateblue;
+						text-decoration: none;
+					}
+					}
+				}
+			}
+		}
+	}	
+
+		.right{
+			width: 400px;
+			height: 200px;
+			position:relative;
+
+			@include breakpoint5a{
+				width: 350px;
+			}
+			
+			p:before{
+				content:'“';
+				position:absolute;
+				top: -20px;
+				left: -30px;
+				font-size: 50px;
+
+				@include breakpoint1a{
+					top: 1px;
+				}
+			}
+
+			p:after{
+				content:'”';
+				position:absolute;
+				bottom: 0;
+				right: -20px;
+				font-size: 50px;
+
+				@include breakpoint1a{
+					bottom: 3px;
+				}
+			}
+
+			p{
+				font-family: $text;
+				font-size: 14px;
+				font-style: italic;
+				color: $bb;
+				text-align: justify;
+			}
+		}
+	}
+
+	.side-shapes{
+		
+		.shape{
+			background: linear-gradient(darkslateblue, darkseagreen);
+			position:absolute;
+			transform: rotate(45deg);
+			border-radius: 5px;
+			// box-shadow: 2px 2px 5px darkslateblue;
+		}
+		.shape1{
+			height:247.49px;
+			width: 247.49px;
+			bottom:52px;
+			left: -125px;	
+		}
+
+		.shape2{
+			height:120.13px;
+			width: 120.13px;
+			top:37px;
+			left: -62px;
+		}
+
+		.shape3{
+			height:180.13px;
+			width: 180.13px;
+			top:125px;
+			left: -100px;
+		}
+
+		.shape4{
+			height:247.49px;
+			width: 247.49px;
+			bottom:52px;
+			right: -125px;
+			transform: rotate(-45deg);
+		}
+	
+		.shape5{
+			height:120.13px;
+			width: 120.13px;
+			top: 37px;
+			right: -62px;
+			z-index:10;
+			transform: rotate(-45deg);
+		}
+
+		.shape6{
+			height:180.13px;
+			width: 180.13px;
+			top:125px;
+			right: -100px;
+			transform: rotate(-45deg);
+			z-index:10;
+		}
+
+		
+	}	
+
+	.bottom{
+		height: 80%;
+	}

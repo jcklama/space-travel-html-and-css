@@ -1,0 +1,366 @@
+@keyframes spin{
+	0%{
+		transform:rotate(0deg);
+	}
+
+	50%{
+		transform:rotate(180deg);
+	}
+
+	100%{
+		transform:rotate(360deg);
+	}
+}
+
+.andr{
+	height: 74vh;
+	width: 100vw;
+	background-color: $bb;
+	display:flex;
+	align-items: center;
+	justify-content: space-between;
+
+	@include breakpoint1a{
+		height: 110vh;
+	}
+
+	@include breakpoint2a{
+		height: 110vh;
+	}
+
+	@include breakpoint3a{
+		height: 84vh;
+	}
+
+	@include breakpoint4a{
+		height: 74vh;
+	}
+}
+
+.andr-wrapper{
+	padding: 0 30px;
+	width: 100%;
+	display:flex;
+
+	@include breakpoint1a{
+		height: 110vh;
+		flex-direction: column;
+		justify-content: space-around;
+		align-items: center;
+	}
+
+	@include breakpoint2a{
+		height: 110vh;
+	}
+
+	@include breakpoint3a{
+		height: 84vh;
+	}
+
+	@include breakpoint4a{
+		height: 74vh;
+	}
+
+	.left{
+		width: 60%; 
+		margin-right: 25px;
+		position:relative;
+
+		@include breakpoint1a{
+			width: 889px;
+			// height: 500px;
+			margin: 0;
+		}
+		
+		@include breakpoint2a{
+			// width: 873px;
+			width: 90%;
+		}
+
+		img{
+		border-radius: 2px;
+		box-shadow: 1px 1px 10px black;
+		}
+
+		.planet-one{
+		
+			.circles{
+				position:absolute;
+				top:26%;
+				left: 25%;
+				z-index:100;
+
+				.circle-1{
+					height:10px;
+					width:10px;
+					border-radius:100%;
+					border-top: 1px solid white;
+					border-left: 1px solid white;
+					background: transparent;
+					animation: spin 1s infinite linear;
+					z-index:10;
+				}
+
+				.circle-2{
+					height:5px;
+					width:5px;
+					border-radius:100%;
+					border-top: 1px solid white;
+					border-left: 1px solid white;
+					background: transparent;
+					transform: rotate(30deg);
+					animation: spin 1s infinite linear reverse;
+					position:absolute;
+					top: 25%;
+					left: 26.1%;
+					z-index:10;
+
+				}
+				
+				&:hover ~ .display{
+						display: block;
+					}
+			}
+			
+			.display:before{
+					content:'';
+					border-left: 25px solid transparent;
+					border-right: 25px solid transparent;
+					border-top: 25px solid transparent;				
+					border-bottom: 25px solid $darkgrey;
+					opacity:0.9;
+					position:absolute;
+					top:-50px;
+					left: 69px;
+
+					@include breakpoint1a{
+						content:none;
+					}
+				}
+
+			.display{
+				position:absolute;
+				top: 37%;
+				left: 14%;
+				display:none;
+				
+				.blurb{
+					width: 200px;
+					height:125px;
+					background-color: $darkgrey;
+					opacity: 0.9;
+					border-radius: 2px;
+					margin:0;
+					position:absolute;
+					padding: 5px 10px;
+					font-family: $text2;
+					font-size: 10px;
+					color: $bb;
+
+					h3{
+						text-transform: uppercase;
+						font-family: $h1;
+						letter-spacing: 1px;
+					}
+
+					ul{
+						list-style-type: none;
+						margin:0;
+						padding-left: 10px;
+
+						li{
+							margin-bottom: 5px;
+						}
+					}
+				}
+			}
+		}
+
+	.planet-two{
+		
+			.circles{
+				position:absolute;
+				top:86%;
+				left: 58%;
+				z-index:100;
+
+				.circle-1{
+					height:10px;
+					width:10px;
+					border-radius:100%;
+					border-top: 1px solid white;
+					border-left: 1px solid white;
+					background: transparent;
+					animation: spin 1s infinite linear;	
+					z-index: 10;
+				}
+
+				.circle-2{
+					height:5px;
+					width:5px;
+					border-radius:100%;
+					border-top: 1px solid white;
+					border-left: 1px solid white;
+					background: transparent;
+					transform: rotate(30deg);
+					animation: spin 1s infinite linear reverse;
+					position:absolute;
+					top: 25%;
+					left: 26.1%;
+					z-index: 10;
+				}
+				
+				&:hover ~ .display{
+						display: block;
+					}
+			}
+			
+			.display:after{
+					content:'';
+					border-left: 25px solid transparent;
+					border-right: 25px solid transparent;
+					border-top: 25px solid $darkgrey;				
+					border-bottom: 25px solid transparent;
+					opacity:0.9;
+					position:absolute;
+					top:125px;
+					left: 76.5px;
+
+					@include breakpoint1a{
+						content:none;
+					}
+				}
+
+			.display{
+				position:absolute;
+				top: 50%;
+				left: 46%;
+				display:none;
+				
+				.blurb{
+					width: 200px;
+					height:125px;
+					background-color: $darkgrey;
+					opacity: 0.9;
+					border-radius: 2px;
+					margin:0;
+					position:absolute;
+					padding: 5px 10px;
+					font-family: $text2;
+					font-size: 10px;
+					color: $bb;
+
+					h3{
+						text-transform: uppercase;
+						font-family: $h1;
+						letter-spacing: 1px;
+					}
+
+					ul{
+						list-style-type: none;
+						margin:0;
+						padding-left: 10px;
+
+						li{
+							margin-bottom: 5px;
+						}
+					}
+				}
+			}
+		}
+	}
+
+	.right{
+		width: 40%;
+		padding: 0 50px;
+		display:flex;
+		flex-direction:column;
+		align-items: center;
+		justify-content: center;
+		box-shadow: 5px 5px 15px darkgrey;
+		border: 20px solid gainsboro;
+		border-radius:2px;
+		position:relative;
+		background: linear-gradient(rgba(0,0,0,0.84), rgba(0,0,0,0.84)), url(../assets/sci-fi-city6.jpg);
+		background-size: cover;
+		
+		@include breakpoint1a{
+			width: 889px;
+			padding: 20px 50px;
+		}
+		@include breakpoint2a{
+			width: 90%;
+		}
+
+		@include breakpoint5a{
+			top: -20px;
+		}
+
+		.intro{
+			display:flex;
+			flex-direction: column;
+			align-items: center;
+
+			@include breakpoint1a{
+				justify-content: center;
+			}
+
+			h1{
+				@include h1-in-sections($bb);
+				text-align:center;
+				position:relative;
+
+				@include breakpoint5a{
+					font-size: 22px;
+				}
+
+				span{
+					font-style: italic;
+					margin-right: -15px;
+				}
+
+				.underline{
+					@include underline(21px, 6px, 40px);
+
+					@include breakpoint5a{
+						@include underline(14px, 4px, 22px);
+					}
+				}
+			}
+
+			p{
+				text-align:justify;
+				font-family: $text2;
+				color:$bb;
+				font-size: 14px;
+
+				@include breakpoint1a{
+					text-align: center;
+				}
+
+				@include breakpoint5a{
+					font-size: 13px;
+				}
+			}
+
+			button{
+				@include button(darkseagreen);
+
+				&:hover{
+					cursor: pointer;
+				}
+
+				a{
+					text-decoration: none;
+					display:block;
+					padding:9px 15px;
+					color: $darkgrey;
+
+					&:visited{
+						color: $darkgrey;
+					}
+				}
+			}
+		}
+	}
+}

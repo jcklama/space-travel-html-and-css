@@ -1,0 +1,141 @@
+.about{
+	height: 42vh;
+	width: 100vw;
+	background: $bb;
+	position:relative;
+
+	@include breakpoint2a{
+		height: 60vh;
+	}
+
+	@include breakpoint3a{
+		height: 105vh;
+	}
+}
+
+.about-wrapper{
+	display:flex;
+	justify-content: space-between;
+	margin: 0 20px;
+	padding: 0 100px;
+
+	@include breakpoint2a{
+		flex-direction: column;
+		align-items: center;
+	}
+
+	@include breakpoint3a{
+		height: 105vh;
+	}
+
+	@include breakpoint4a{
+		padding: 0 50px;
+	}
+
+	.about-shapes{
+	
+		.shapes{
+			position:absolute;
+			border-radius: 5px;
+			background: linear-gradient(goldenrod, darkslateblue);
+			transform: rotate(45deg);
+		}
+		
+		.shape1{
+			height: 180px;
+			width: 180px;
+			bottom:240px;
+			left:-120px;
+
+			@include breakpoint3a{
+				left: 120px;
+			}
+		}
+
+		.shape2{
+			height: 250px;
+			width: 250px;
+			top: 50px;
+			right: -130px;
+			transform: rotate(-45deg);
+			background: linear-gradient(darkseagreen, darkslateblue);
+		}
+
+		.shape3{
+			height: 90px;
+			width: 90px;
+			top: 25px;
+			right: 750px;
+			transform: rotate(-45deg);
+			background: linear-gradient(darkseagreen, goldenrod);
+		}
+	}
+
+			h1{
+				@include h1-in-sections($darkgrey);
+				position:relative;
+
+				span{
+					font-style: italic;
+					letter-spacing: 6.5px;
+				}
+
+				.underline{
+				@include underline (20px, 6px, 39px);
+				}
+
+			// @include breakpoint3a{
+			// 	text-align: center;
+			// 	}	
+			}
+
+			p{
+			font-family: $text2;
+			text-align: justify;
+			font-size: 14px;
+			color: $darkgrey;
+			margin-bottom: 30px;
+			}
+
+		.speed{
+			// width: calc((100% / 3) - 10%);
+			width: calc((100% / 3) - (10% * 2) / 3);
+			height: 300px;
+			// margin-right: 10%;
+			z-index: 10;
+
+			@include breakpoint2a{
+				width: 100%;
+				height: auto;
+				}
+			}
+
+		.idea{
+			// width: calc((100% / 3) - 10%);
+			width: calc((100% / 3) - (10% * 2) / 3);
+			height: 300px;
+			// margin-right: 10%;
+			z-index: 10;
+
+			@include breakpoint2a{
+				width:100%;
+				height: auto;
+				}
+		}
+
+		.infinity{
+			// width: calc((100% / 3) - 10%);
+			width: calc((100% / 3) - (10% * 2) / 3);
+			// margin-right: 10%;
+			height: 300px;
+			z-index: 10;
+
+			@include breakpoint2a{
+				width:100%;
+				height: auto;
+				}
+		}
+}
+
+
+
