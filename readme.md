@@ -7,4 +7,5 @@ Conceptualized space travel business website with a focus on HTML and CSS. Inclu
 
 ** Key concepts explored: **
 - Responsive design
+- Accessbility considerations (e.g. visibilityhidden class)
 - HTML animations
